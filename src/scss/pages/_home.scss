@@ -1,0 +1,24 @@
+
+.lightbox{
+    width: -webkit-fill-available;
+    width: $percentage;
+    height: 600px;
+    background-color: rgb(238, 238, 238);
+    border: .5px dashed;
+}
+.scrrol-overflow{
+    max-height: 600px;
+    overflow: scroll;
+}
+.btn-flex{
+    position: absolute;
+    top: $percentage-50;
+    left: $null;
+    width: $percentage;
+    margin: $null !important;
+    button{
+        background-color: $black;
+        border-radius: $null;
+    }
+}
+

@@ -1,0 +1,190 @@
+@use '../utilities/variables' as * ;
+@mixin text-styling($color, $font-size, $font-family, $font-weight, $line-height) {
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    word-wrap: break-word;
+}
+
+@mixin center{
+    position: absolute;
+    top: $percentage-50;
+    left: $percentage-50;
+    transform: translate(-$percentage-50,-$percentage-50);
+}
+@mixin custom-text-style($color, $font-size, $font-family, $font-weight, $line-height, $letter-spacing) {
+    @include text-styling($color, $font-size, $font-family, $font-weight, $line-height);
+    letter-spacing: $letter-spacing;
+}
+
+@mixin flex-j-a-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin custom-heading-styles($color: #38343D, $font-size: 48px, $font-weight: 400, $line-height: 54px) {
+    color: var(--greyscale-grey-100, $color);
+    font-family: Cardo;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin custom-paragraph-styles($color: #818181, $font-size: 14px, $font-weight: 600, $line-height: 24px) {
+    color: var(--greyscale-grey-80, $color);
+    font-family: Plus Jakarta Sans;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin montserrat-fs-25px-fw-lh-ls($color: transparent, $px: 0) {
+    color: $color;
+    font-family: $ff_montserrat;
+    font-size: $px;
+    font-weight: 400;
+    line-height: 113.9%;
+    letter-spacing: 0.75px;
+    text-decoration: none;
+}
+
+@mixin btn {
+    width: $percentage;
+    height: $percentage;
+    border: $none;
+    outline: $none;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex__end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin flex__justify__and__align-center {
+    display: flex;
+    justify-content: $center;
+    align-items: $center;
+}
+
+@mixin flex__between___items-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: $center;
+}
+
+@mixin f-none__column {
+    display: $none;
+    flex-direction: column;
+}
+
+@mixin product-box-offer {
+    @include flex__justify__and__align_center;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 65px;
+    height: 24px;
+    color: #ffffff;
+    background-color: #e63b3b;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    transition: $none !important;
+    animation: $none;
+    z-index: 100;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin text-justify {
+    text-align: justify;
+}
+
+@mixin br-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin padding-top($top) {
+    padding-top: $top;
+}
+
+@mixin margin-bottom($bottom) {
+    margin-bottom: $bottom;
+}
+
+
+
+@mixin text-styling($color, $font-size, $font-family, $font-weight, $line-height) {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    word-wrap: break-word;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-styles {
+    width: $percentage;
+    max-width: 200px;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+
+    &:focus {
+        box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    }
+
+    &:hover {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: #D6D6E7 0 3px 7px inset;
+        color: white;
+        transform: translateY(2px);
+    }
+}

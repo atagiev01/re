@@ -1,0 +1,232 @@
+:root {
+    --border: 1px solid rgba(0,0,0,0.1);
+    --main: #c20f00;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: .5px;
+    font-family: 'Roboto',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.h-100vh{
+  height: 50vh;
+  
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+
+#info{
+  background-color: $light-gray;
+  margin: 64px 0 0 0;
+}
+p{
+  font-weight: 700 !important;
+  color: #000;
+}
+.form{
+  @include center
+ }
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free" !important;
+  }
+  
+img{
+    width: $percentage;
+    height: $percentage;
+    object-fit: contain;
+}
+.text-justify {
+    text-align: justify;
+}
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.br-50{
+    border-radius: 50px;
+}
+.br-25{
+    border-radius: 25px;
+}
+.pt-6{
+    padding-top: $fs_24px;
+}
+.pt-20{
+  padding-top: 20px;  
+}
+.mb-6{
+    margin-bottom:$fs_24px
+}
+@media (min-width: 1264px){
+    .container {
+        max-width: 1185px;
+    }
+}
+.custom-container{
+    padding: 4px 16px;
+}
+
+.bg-container {
+    background-color: var(--bg-color);
+}
+.bg-container-red {
+    background-color: var(--bg-red);
+}
+
+@media  (min-width:500px){
+    nav{
+        display:none;
+    }
+}
+
+
+
+.header-title{
+    font-weight: 900!important;
+    font-size: 3.75rem!important;
+    line-height: 3.75rem;
+    letter-spacing: -.0083333333em!important;
+    font-family: Roboto,sans-serif!important;
+    color: var(--main);
+}
+
+
+
+
+#pro{
+    position: absolute;
+    z-index: 100000;
+}
+
+
+
+.modalBackground {
+z-index: 9999;
+position: fixed;
+top: 0;
+left: 0;
+width: $percentage;
+height: $percentage;
+background-color: rgba(0, 0, 0, 0.5); 
+z-index: 999; 
+transition: opacity 1s ;
+}
+  
+
+
+.table-bordered>:not(caption)>*>* {
+  vertical-align: middle;
+}
+ 
+
+  
+  
+.btn-87 {
+  margin: 10px 0;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: $percentage + $percentage auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #6b1200 0%, #8d1207  51%, #d82501  $percentage);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-87:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-87:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+.custom-file-input {
+  display: inline-block;
+  position: relative;
+}
+
+.input-file {
+  display: $none; 
+}
+
+.custom-file-input label {
+  padding: 40px;
+  margin: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 4px dashed red;
+}
+
+
+
+
+.card{
+  border-radius: 14px !important;
+  overflow: hidden;
+  
+  .image-card-container{
+    width: $percentage;
+    height: $px-200;
+    img{
+      max-height: $px-200;
+      object-fit: cover;
+    }
+    @media only screen and (min-width:$px-200){
+      height: $px-300;
+    img{
+      max-height: $px-300;
+
+    }
+    }
+  }
+  
+}
+
+
+
+
+
+@media only screen and (max-width:970px){
+  
+  .more-image{
+    gap: 20px;
+    flex-direction: column-reverse;
+    &>div{
+      width: $percentage;
+      display: flex;
+      &>div>div{
+        width: 20%;
+      }
+      &>div{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+  }
+  .gap--4{
+    gap: 20px;
+  }
+}
